@@ -1,40 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DL Dev</title>
-</head>
-<body>
+    <!-- Tener precargado los estilos, da un mejor rendimiento  -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Estilos normalizados en CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Importar fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Delmy Lira</h1>
-    </header>
-   
-    <nav>
+      <h1 class="titulo">Delmy Lira <span>Developer</span></h1>
+
+      <nav>
         <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Sobre mí</a></li>
-            <li><a href="">Clientes</a></li>
-            <li><a href="">Contactos</a></li>
+          <li><a href="">Inicio</a></li>
+          <li><a href="">Sobre mí</a></li>
+          <li><a href="">Clientes</a></li>
+          <li><a href="">Contactos</a></li>
         </ul>
-    </nav>
-    
+      </nav>
+    </header>
     <section>
-        <h2>Diseño y desarrollo web</h2>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="84" height="84" viewBox="0 0 24 24" stroke-width="1" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-          </svg>
-        <p>Mérida, Yucatán</p>
+      <h2 class="titulo">Diseño y desarrollo web</h2>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-map-pin"
+        width="84"
+        height="84"
+        viewBox="0 0 24 24"
+        stroke-width="1"
+        stroke="#ff9300"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+        <path
+          d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+        />
+      </svg>
+      <p>Mérida, Yucatán</p>
     </section>
 
-    <main>
-        
-    </main>
+    <h2>Mis servicios</h2>
+    <section>
+      <h3>Servicios Web</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </section>
 
-    <footer>
+    <section>
+      <h3>Aplicaciones Moviles</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </section>
 
-    </footer>
-</body>
+    <section>
+      <h3>E-Commerse</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contacto</h2>
+    </section>
+
+    <form>
+      <fieldset>
+        <legend>Llena tus datos para establecer contacto.</legend>
+
+        <label> Nombre </label>
+        <input type="text" onkeypress="" placeholder="Tu Nombre" />
+
+        <label> Telefono </label>
+        <input type="tel" onkeypress="" placeholder="Tu Numero" />
+
+        <label> Correo </label>
+        <input type="email" onkeypress="" placeholder="Tu Correo" />
+
+        <p></p>
+        <label> Mensaje </label>
+        <textarea name="idk " id="" cols="30" rows="5"></textarea>
+      </fieldset>
+    </form>
+    <footer></footer>
+  </body>
 </html>
