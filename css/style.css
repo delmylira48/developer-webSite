@@ -18,6 +18,7 @@
 html{
     /* Dar relación de tamaño a rem, cada rem vale el 62.5% del tamaño predefinido por el navegador*/
     font-size: 62.5%; 
+    scroll-snap-type: y mandatory;
 }
 
 html {
@@ -31,6 +32,11 @@ html {
     box-sizing: inherit;
   }
 
+.titulo,.scroll-heading{
+    scroll-snap-align: start; 
+    scroll-snap-stop: always; 
+}
+
 body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
@@ -38,7 +44,7 @@ body{
 }
 
 main{
-    width: 75%;
+    width: 80%;
     padding: 2rem;
     margin: 2rem auto;
 }
@@ -146,8 +152,12 @@ h1,h2,h3{
     margin-top: 3rem;
     text-transform: uppercase;
     width: 90%;
-
+    border: none;
     
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 .servicios{
@@ -165,12 +175,93 @@ h1,h2,h3{
 
 .servicio h3{
     color:var(--secundario);
+}
+
+.iconos{
+    background-color: #ffc107;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.contacto{
+    margin: 3rem auto;
+}
+
+form{
+    /* Si es menor a 60 rem ocupa el 100%, si no, toma el valor de 60rem */
+    width: min(60rem, 100%);
+    margin: auto;
+    padding: 2rem;
+    background-color: var(--oscuro);
+    border-radius: 1rem;
+}
+
+form fieldset{
+    border: none;
+}
+
+form legend{
+    text-align: center;
+    color: var(--primario);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color:var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+
+}
+
+.contenedor-campos input, textarea{ 
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.contenedor-campos textarea{
+    height: 20rem;
     
 }
 
+.contenedor-enviar{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    text-align: center;
+}
 
 /* telefono */
 @media (min-width: 580px){
+    
+}
+
+/* tablet */
+@media (min-width: 768px){
+    .boton{
+        width: auto;
+    }
+
     .navegacion_Principal {
         flex-direction: row;
         justify-content: space-around;
@@ -180,12 +271,12 @@ h1,h2,h3{
     .servicios{
         grid-template-columns:repeat(3, 1fr);
     }
-}
 
-/* tablet */
-@media (min-width: 768px){
-    .boton{
-        width: auto;
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        grid-template-rows: auto auto 2rem;
     }
 }
 
