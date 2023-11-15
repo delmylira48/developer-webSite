@@ -18,14 +18,16 @@
 html{
     /* Dar relación de tamaño a rem, cada rem vale el 62.5% del tamaño predefinido por el navegador*/
     font-size: 62.5%; 
+    /* indica el desplazamiento en eje y. Bloquea el desplazamiento en el eje x
+    mandatory indica que a fuerza se detendrá el scroll donde se diga */
     scroll-snap-type: y mandatory;
-}
-
-html {
-    box-sizing: border-box;
    /* gradiente */
     background: linear-gradient(90deg, var(--blanco) 0%, rgb(207, 207, 198) 100%);
+}
 
+/* para que se respeten los tamaños de las cajas */
+html {
+    box-sizing: border-box;
 
   }
   *, *:before, *:after {
@@ -33,17 +35,20 @@ html {
   }
 
 .titulo,.scroll-heading{
+    /* indica en donde empezará y se detendrá el desplazamiento */
     scroll-snap-align: start; 
     scroll-snap-stop: always; 
 }
 
 body{
+    /* da un tamaño y fuente para toda la página */
     font-size: 16px;
     font-family: 'Krub', sans-serif;
     
 }
 
 main{
+    /* le da tamaño y "margenes" a la caja de main  */
     width: 80%;
     padding: 2rem;
     margin: 2rem auto;
@@ -59,6 +64,7 @@ main{
 }
 
 .titulo{
+    /* da propiedadese al titulo, como su fuente, tamaño, margenes, alineación */
     text-align: center;
     font-size: 3.8rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -66,6 +72,7 @@ main{
 }
 
 .titulo span{
+    /* es una parte del titulo diferente o que resalta */
     font-size: 2rem;
     /* transparencia */
     color:rgba(231, 113, 182, 0.5); 
@@ -77,6 +84,7 @@ Otra forma de dar color es hsl
 */
 
 .navegacion_Principal{
+    /* hace que la navegación se organize en columnas. Y que sus elementos esten centrados */
     background-color: var(--secundario);
     /* width: 120rem; */
     /* margin: auto; */
@@ -87,6 +95,7 @@ Otra forma de dar color es hsl
 }
 
 .navegacion_Principal a{
+    /* formato a los enlaces de la navegación */
     text-decoration: none;
     padding: 1rem;
     font-weight: bold;
@@ -99,11 +108,13 @@ Otra forma de dar color es hsl
 }
 
 .navegacion_Principal a:hover{
+    /* cuando se posicione en los enlaces de la navegación cambiará el color y el fondo */
     background-color: var(--primario);
     color:var(--oscuro);
 }
 
 .hero{
+    /* formato para la imagen central */
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover; /* posiciona la imagen en todo el tamaño del contenedor */
@@ -112,6 +123,7 @@ Otra forma de dar color es hsl
 }
 
 .contenedor-hero{
+    /* Contenedor dentro de la imagen, centra los elementos  */
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -124,26 +136,31 @@ Otra forma de dar color es hsl
 }
 
 .contenedor-hero h2, .contenedor-hero p{
+    /* formato para el texto dentro del contenedor que va en la imagen */
     color: white;
     font-weight: bold;
 
 }
 
 h3{
+    /* tamaño para el titulo 3 */
     font-size: 1.8rem;
 }
 
 h1,h2,h3{
+    /* centra los titulos del 1 al 3 */
     text-align: center;
 }
 
 .ubicacion{
+    /* le da una posición a los elementos que indican la ubicación */
     display: flex;
     justify-content: center;
     align-items: flex-end;   
 }
 
 .boton{
+    /* le da formato a los botones */
     background-color: var(--secundario);
     padding: 2rem;
     text-decoration: none;
@@ -158,27 +175,34 @@ h1,h2,h3{
 }
 
 .boton:hover{
+    /* indica que al posicionarse en el botón el cursos cambie */
     cursor: pointer;
 }
 
 .servicios{
+    /* Forma de organizar los elementos en una rejilla */
     display: grid;
-    grid-template-columns: 1fr;
+    /* indica cuantas columas existirán */
+    grid-template-columns: 1fr; 
+    /* indica el tamaño de la separación entre columnas */
     column-gap: 1rem;
 
 }
 
 .servicio{
+    /* organiza los elementos de un servicio uno debajo de otro y los centra */
     display:flex;
     flex-direction: column;
     align-items: center;
 }
 
 .servicio h3{
+    /* da color a el titulo h3 ubicado dentro del servicio */
     color:var(--secundario);
 }
 
 .iconos{
+    /* crea el fondo donde se encuentran los iconos */
     background-color: #ffc107;
     width: 10rem;
     height: 10rem;
@@ -189,17 +213,20 @@ h1,h2,h3{
 }
 
 .servicio p{
+    /* le da tamaño y alineación al texto de los servicios */
     line-height: 2;
     text-align: center;
 }
 
 .contacto{
+    /* Centra y da un margen arriba y abajo */
     margin: 3rem auto;
 }
 
 form{
     /* Si es menor a 60 rem ocupa el 100%, si no, toma el valor de 60rem */
     width: min(60rem, 100%);
+    /* centra y le da margenes al formulario, hace sus esquinas redondeadas */
     margin: auto;
     padding: 2rem;
     background-color: var(--oscuro);
@@ -207,10 +234,12 @@ form{
 }
 
 form fieldset{
+    /* le quita el borde al fieldset */
     border: none;
 }
 
 form legend{
+    /* le da formato a la legenda en el formulario */
     text-align: center;
     color: var(--primario);
     font-size: 1.8rem;
@@ -220,10 +249,12 @@ form legend{
 }
 
 .campo{
+    /* le da margen por abajo al campo */
     margin-bottom: 1rem;
 }
 
 .campo label{
+    /* le da formato a las etiquetas */
     color:var(--blanco);
     font-weight: bold;
     margin-bottom: .5rem;
@@ -232,6 +263,7 @@ form legend{
 }
 
 .contenedor-campos input, textarea{ 
+    /* le da estilo a los campos de entrada del formulario */
     width: 100%;
     border: none;
     padding: 1.5rem;
@@ -239,18 +271,24 @@ form legend{
 }
 
 .contenedor-campos textarea{
+    /* le da una altura definida al textarea */
     height: 20rem;
     
 }
 
 .contenedor-enviar{
+    /* centra el input de enviar */
     display: flex;
     justify-content: center;
 }
 
 footer{
+    /* centra el texto del footer */
     text-align: center;
 }
+
+/* los mediaQuery sirven para hacer responsiva a la página, es decir, cambiar los elementos o 
+la disposición de estos al cambiar de tamaño el dispositivo */
 
 /* telefono */
 @media (min-width: 580px){
@@ -260,23 +298,30 @@ footer{
 /* tablet */
 @media (min-width: 768px){
     .boton{
+        /* le da un tamaño dinámico al botón, el cual se define por el texto que tiene dentro */
         width: auto;
     }
 
     .navegacion_Principal {
+        /* pone los elementos de la navegación en una sola fila y los distribuye */
         flex-direction: row;
         justify-content: space-around;
 
     }
 
     .servicios{
+        /* indica que ahora habrán 3 columnas del tamaño de 1 fragmento */
         grid-template-columns:repeat(3, 1fr);
     }
 
     .contenedor-campos{
+        /* El contenedor de campos se organiza en forma de rejilla. 
+        le asigna 2 columnas del tamaño de 1 fragmento y le da una separación de 2 rem */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;
+        /* indica la altura de las filas, el auto indica que se ajustará automáticamente las primeras 
+        2 filas, mientras que la tercera tendrá una altura de 2rem */
         grid-template-rows: auto auto 2rem;
     }
 }
